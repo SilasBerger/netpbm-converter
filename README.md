@@ -14,9 +14,9 @@ Command format: `convert.py <magic_number> <input_path>`
 
 Usage examples:
 ```sh
-convert.py P1 ./example_data/images/cat.jpg # creates ./example_data/images/cat.pbm (black & white)
-convert.py P2 ./example_data/images/dog.jpg # creates ./example_data/images/dog.pgm
-convert.py P3 ./example_data/images/capibara.jpg # creates ./example_data/images/capibara.ppm
+python convert.py P1 ./example_data/images/cat.jpg # creates ./example_data/images/cat.pbm (black & white)
+python convert.py P2 ./example_data/images/dog.jpg # creates ./example_data/images/dog.pgm
+python convert.py P3 ./example_data/images/capibara.jpg # creates ./example_data/images/capibara.ppm
 ```
 
 ## Supported Netpbm formats
