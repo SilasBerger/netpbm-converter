@@ -45,7 +45,7 @@ def convert_p1(image: numpy.ndarray, out_dir: pathlib.Path, base_filename: str):
     for row in black_and_white_image:
         lines.append(['1' if val == 0 else '0' for val in row])
 
-    write_to_file(lines, out_dir, base_filename, 'ppm')
+    write_to_file(lines, out_dir, base_filename, 'pbm')
 
 
 def convert_p2(image: numpy.ndarray, out_dir: pathlib.Path, base_filename: str):
@@ -62,7 +62,21 @@ def convert_p2(image: numpy.ndarray, out_dir: pathlib.Path, base_filename: str):
 
 
 def convert_p3(image: numpy.ndarray, out_dir: pathlib.Path, base_filename: str):
-    raise Exception('Not yet implemented.')
+    lines = [['P3']]
+
+    height, width, _ = image.shape
+    lines.append([str(width), str(height)])
+
+    lines.append(['255'])  # RGB max value
+
+    rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    for row in rgb_image:
+        line = []
+        for rgb_value in row:
+            line.extend([str(val) for val in rgb_value])
+        lines.append(line)
+
+    write_to_file(lines, out_dir, base_filename, 'ppm')
 
 
 def convert(input_path: pathlib.Path, mode: str):
