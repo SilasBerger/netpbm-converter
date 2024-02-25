@@ -19,12 +19,17 @@ python convert.py P2 ./example_data/images/dog.jpg # creates ./example_data/imag
 python convert.py P3 ./example_data/images/capibara.jpg # creates ./example_data/images/capibara.ppm (full RGB)
 ```
 
-## Supported Netpbm formats
+## Features
+### Supported Netpbm formats
 | Type             | Magic number | Extension | Colors                |
 |------------------|--------------|-----------|-----------------------|
 | Portable BitMap  | `P1` (ASCII) | `.pbm`    | 0-1 (black & white)   |
 | Portable GrayMap | `P2` (ASCII) | `.pgm`    | 0-255 (grayscale)     |
 | Portable PixMap  | `P3` (ASCII) | `.ppm`    | 0-255 per RGB channel |
+
+### Limitations
+- No support for magic numbers `P4` - `P6` (raw binary)
+- No support for multibyte GrayMap
 
 ## Useful links
 - [Netpbm (Wikipedia)](https://en.wikipedia.org/wiki/Netpbm)
