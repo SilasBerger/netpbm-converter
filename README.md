@@ -1,4 +1,4 @@
-# NetPBM Converter
+# Netpbm Converter
 A command-line utility for converting images to Netpbm.
 
 ## Usage
