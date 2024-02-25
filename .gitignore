@@ -1,1 +1,4 @@
 venv
+example_data/images/*.pbm
+example_data/images/*.pgm
+example_data/images/*.ppm
