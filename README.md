@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ### Converting an image
 Command format: `convert.py <magic_number> <input_path>`
 
-Usage examples:
+**Usage examples:**
 ```sh
 python convert.py P1 ./example_data/images/cat.jpg # creates ./example_data/images/cat.pbm (black & white)
 python convert.py P2 ./example_data/images/dog.jpg # creates ./example_data/images/dog.pgm (grayscale)
